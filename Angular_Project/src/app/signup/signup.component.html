@@ -1,0 +1,33 @@
+<!-- Sign Up Modal --> 
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">Register</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form [formGroup]="userSignupForm" > 
+    <div class="modal-body">
+      <div class="form-inline" style="margin-bottom: 2%">
+            <input type="text" class="form-control" style="width: 48%;margin-right: 4%" formControlName='userFirstName' placeholder="First Name">
+            <input type="text" class="form-control" style="width: 48%" formControlName='userLastName' placeholder="Last Name">
+      </div>   
+      <div class="form-group">  
+            <input type="text" class="form-control" formControlName='userMail' placeholder="Email">
+      </div>      
+      <div class="form-group">  
+            <input type="password" class="form-control" formControlName='userPassword' placeholder="Password">
+      </div>      
+      <div class="form-group">        
+            <input type="password" class="form-control" formControlName='userConfirmPassword' placeholder="Confirm Password">
+      </div>
+      <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" formControlName='acknowledgement'>
+            I accept the Terms of Use & Privacy Policy
+          </label>
+        </div>
+    </div>
+    <div class="form-group" style="margin-left: 14%;padding: 1%">
+        <button type="button" style="width : 80%"class="btn btn-info" aria-label="Sign Up" [disabled]="!userSignupForm.valid" >Register Now</button>
+    </div>
+  </form>

@@ -1,0 +1,37 @@
+<nav *ngIf="brandingData?.isBackButtonEnabled" class="mb-1 navbar navbar-expand-lg navbar-dark purple lighten-1">
+  <a class="navbar-brand" href="/home"><img src="../assets/Icon.png" height="50px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5" aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-5">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+           MEDICARE<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+              <a class="dropdown-item waves-light" mdbWavesEffect href="/addMedicine2">Add Medicine</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect href="/addStock">Add Stock</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect href="/viewStock">View Stock</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect href="/viewMedicines">View Medicine</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect href="/addInvoice">Generate Invoice</a>
+          </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">1
+          <i class="fa fa-envelope"></i>
+        </a>
+      </li>
+
+      <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0" style="height: 30px;">
+        Sharnendra</a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-purple" role="menu">
+              <a class="dropdown-item waves-light" mdbWavesEffect href="#" (click)="logout()">Logout</a>
+          </div>
+      </li>
+    </ul>
+  </div>
+</nav>

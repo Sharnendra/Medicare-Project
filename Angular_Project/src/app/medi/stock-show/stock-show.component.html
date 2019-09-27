@@ -1,0 +1,48 @@
+<div class="bg"> 
+<!-- Default form register -->
+<div class="table-padding"> 
+<table class="table table-striped" cellspacing="0">
+    <thead style="font-size: 1.3rem;">
+      <tr>
+        <th class="th-sm">#
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Batch
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Medicine
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Mfg Date
+                <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Exp Date
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Quantity
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Cost/Quantity
+            <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Sell (%)
+            <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stock of stockDetails; let i= index">
+            <td>{{i+1}}</td>
+            <td>{{stock.batchId}}</td>
+            <td>{{stock.medicineName}}</td>
+            <td>{{stock.manufactureDate}}</td>
+            <td>{{stock.expiryDate}}</td>
+            <td>{{stock}}</td>
+            <td>{{stock.price}}</td>
+            <td>20</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+

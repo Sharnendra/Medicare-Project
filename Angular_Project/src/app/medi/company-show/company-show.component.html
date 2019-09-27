@@ -1,0 +1,38 @@
+<div class="bg"> 
+  <div class="table-padding"> 
+    <table class="table table-striped" cellspacing="0">
+      <thead style="font-size: 1.3rem;">
+          <tr>
+            <th class="th-sm">#
+              <i class="fa fa-sort float-right" aria-hidden="true"></i>
+            </th>
+            <th class="th-sm">Medicine Name
+            <i class="fa fa-sort float-right" aria-hidden="true"></i>
+            </th>
+            <th class="th-sm">Company Name
+            <i class="fa fa-sort float-right" aria-hidden="true"></i>
+            </th>
+            <th class="th-sm">Created Date
+            <i class="fa fa-sort float-right" aria-hidden="true"></i>
+            </th>
+            <th class="th-sm">Modified Date
+                <i class="fa fa-sort float-right" aria-hidden="true"></i>
+            </th>
+            <!--<th class="th-sm">Edit Data
+                <i class="fa fa-sort float-right" aria-hidden="true"></i>
+            </th>-->
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let company of companyDetails; let i= index">
+                <td>{{i+1}}</td>
+                <td>{{company.medicineName}}</td>
+                <td>{{company.companyName}}</td>
+                <td>{{company.createdDate}}</td>
+                <td>{{company.modifiedDate}}</td>
+                <!--<td><button class="btn btn-danger" type="submit">Edit</button></td>-->
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</div>

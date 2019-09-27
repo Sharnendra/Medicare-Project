@@ -1,0 +1,140 @@
+<div class="bg"> 
+<!-- Default form register -->
+<div class="table-padding">
+<form [formGroup]="addStockForm" class="text-center border border-light p-5">
+        <p class="h4 mb-4">Add Stock Details</p>
+        <div class="form-row mb-4">
+            <div class="col-sm">
+                <!-- Batch Id -->
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="batchLabel">Batch</span>
+                    </div>
+                    <input type="text" id="batchId" class="form-control" placeholder="Batch Id" formControlName="batchId">
+                </div>
+            
+            </div>
+            <div class="col-sm">
+                <!-- Batch Price -->
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="priceLabel">Price</span>
+                    </div>
+                    <input type="text" id="batchPrice" class="form-control" placeholder="Batch Price" formControlName="batchPrice">
+                </div>
+            </div>
+            
+        </div>
+        <div class="form-row mb-4">
+            <div class="col-sm">
+                <!-- Medicine name -->
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="medicineLabel">Medicine</span>
+                    </div>
+                    <input type="text" id="medicineName" class="form-control" placeholder="Medicne name" formControlName="medicineName">
+                </div>
+            </div>
+			<div class="col-sm">
+                <!-- Company name -->
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="companyLabel">Company</span>
+                    </div>
+                    <input type="text" id="companyName" class="form-control" placeholder="Company name" formControlName="companyName">
+                </div>
+            </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col-sm">
+                <!-- Total Quantity -->
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="quantityLabel">Quantity</span>
+                    </div>
+                    <input type="text" id="totalQuantity" class="form-control" placeholder="Total Quantity" formControlName="totalQuantity">
+                </div>
+            </div>
+            <div class="col-sm">
+                <!-- Cost Per Quantity -->
+                <div class="input-group input-group-md">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="costQuantityLabel">Cost/Quantity</span>
+                        </div>
+                <input type="text" id="costPerQuantity" class="form-control" placeholder="Cost Per Quantity" formControlName="costPerQuantity">
+                </div>
+            </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col-sm">
+                <div class="input-group input-group-md">
+                    <!-- Manufacture date -->
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="manufactureDateLabel">Mfg date</span>
+                    </div>
+                    <input type="date" id="manufactureDate" class="form-control" formControlName="manufactureDate">
+                </div>
+            </div>
+			<div class="col-sm">
+                <div class="input-group input-group-md">
+                    <!-- Expiry date -->
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="expiryDateLabel">Exp date</span>
+                    </div>
+                    <input type="date" id="expiryDate" class="form-control" formControlName="expiryDate">
+                </div>
+            </div>
+        </div>
+        <!-- Sign up button -->
+        <!-- <button class="btn btn-info my-4 btn-block" type="submit">Add Stock</button> -->
+        <button class="btn btn-info my-4" type="submit" (click)="insertStock();" [disabled]="!addStockForm.valid">Add Stock</button>
+        <button class="btn btn-danger my-4" type="submit" (click)="resetStock();">Reset Stock</button>
+    </form>
+</div>
+<!-- 
+<div class="table-padding"> 
+<table class="table table-striped" cellspacing="0">
+    <thead style="font-size: 1.3rem;">
+      <tr>
+        <th class="th-sm">#
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Batch
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Medicine
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Mfg Date
+                <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Exp Date
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Quantity
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Cost/Quantity
+            <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+        <th class="th-sm">Sell (%)
+            <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stock of stockDetails; let i= index">
+            <td>{{i+1}}</td>
+            <td>{{stock.batchId}}</td>
+            <td>{{stock.medicineName}}</td>
+            <td>{{stock.manufactureDate}}</td>
+            <td>{{stock.expiryDate}}</td>
+            <td>{{stock}}</td>
+            <td>{{stock.price}}</td>
+            <td>20</td>
+        </tr>
+    </tbody>
+  </table>
+</div>-->
+</div>
+

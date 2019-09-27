@@ -1,0 +1,54 @@
+<div class="bg"> 
+<!-- Default form register -->
+<div class="table-padding">
+<form [formGroup]="addInvoiceForm" class="text-center border border-light p-5">
+        <p class="h4 mb-4">Add Invoice Details</p>
+        <div class="form-row mb-4">
+            <div class="col-sm">
+                <!-- Medicine Name -->
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="medicineLabel">Medicine</span>
+                    </div>
+                    <input type="text" id="medicineNameId" class="form-control" placeholder="Medicine name" formControlName="medicineName">
+                </div>
+            
+            </div>
+            <div class="col-sm">
+                <!-- Batch Price -->
+                <div class="input-group input-group-md">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="priceLabel">Company</span>
+                    </div>
+                    <input type="text" id="companyNameId" class="form-control" placeholder="Company Name" formControlName="companyName">
+                </div>
+            </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col-sm">
+                <div class="input-group input-group-md">
+                    <!--Created date -->
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="createdDateLabel">Created date</span>
+                    </div>
+                    <input type="date" id="createdDateId" class="form-control" formControlName="createdDate">
+                </div>
+            </div>
+			<div class="col-sm">
+                <div class="input-group input-group-md">
+                    <!-- Modified date -->
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="expiryDateLabel">Modified date</span>
+                    </div>
+                    <input type="date" id="modifieddateId" class="form-control" formControlName="modifiedDate">
+                </div>
+            </div>
+        </div>
+        <!-- Sign up button -->
+        <!-- <button class="btn btn-info my-4 btn-block" type="submit">Add Stock</button> -->
+        <button class="btn btn-info my-4" type="submit" (click)="insertInvoice();" [disabled]="!addInvoiceForm.valid">Add Invoice</button>
+        <button class="btn btn-danger my-4" type="submit" (click)="resetInvoice();">Reset Invoice</button>
+    </form>
+</div>
+</div>
+
